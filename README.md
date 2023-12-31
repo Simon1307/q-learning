@@ -36,7 +36,7 @@ To render a trained episode, run `render_episode.py`. This script loads the save
 
 ## Rendered Episode
 
-![Rendered Episode](./artifacts/mountaincar.gif)
+![Rendered Episode](./assets/mountaincar.gif)
 
 For more details on the code and the Mountain Car problem, refer to the comments in the source files.
 
