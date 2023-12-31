@@ -12,15 +12,16 @@ Q-Learning is a popular RL algorithm that deals with the problem of making decis
 
 The Q-learning update formula is as follows:
 
-\[ Q(s, a) = Q(s, a) + \alpha \cdot \left[ R + \gamma \cdot \max_{a'}Q(s', a') - Q(s, a) \right] \]
+$$ Q(s, a) = Q(s, a) + \alpha \cdot [R(s, a) + \gamma \cdot \max_{a'} Q(s', a') - Q(s, a)] $$
+
 
 Here's a breakdown of the components:
 
-- \( Q(s, a) \): The Q-value for taking action \(a\) in state \(s\).
-- \( \alpha \): The learning rate, controlling the weight given to new information. It's a value between 0 and 1.
-- \( R \): The immediate reward obtained after taking action \(a\) in state \(s\).
-- \( \gamma \): The discount factor, representing the importance of future rewards. It's a value between 0 and 1.
-- \( \max_{a'}Q(s', a') \): The maximum Q-value for any action \(a'\) in the next state \(s'\).
+- $Q(s, a)$: The Q-value for taking action $a$ in state $s$.
+- $\alpha$: The learning rate, controlling the weight given to new information. It's a value between 0 and 1.
+- $R$: The immediate reward obtained after taking action $a$ in state $s$.
+- $\gamma$: The discount factor, representing the importance of future rewards. It's a value between 0 and 1.
+- $\max_{a'}Q(s', a')$: The maximum Q-value for any action $a'$ in the next state $s'$.
 
 The update formula essentially adjusts the Q-value for the current state-action pair based on the immediate reward and the estimated future rewards. The goal is for the Q-values to converge to accurate estimates, allowing the agent to make optimal decisions in the environment.
 

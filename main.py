@@ -5,7 +5,6 @@ from utils import get_state, max_action, create_environment_space, plot_mean_rew
 
 if __name__ == '__main__':
     env = gym.make('MountainCar-v0')
-    # env._max_episode_steps = 1000
     n_episodes = 700
     alpha = 0.1
     gamma = 0.99
