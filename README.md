@@ -8,6 +8,24 @@ Reinforcement Learning (RL) is a paradigm in machine learning where an agent lea
 
 Q-Learning is a popular RL algorithm that deals with the problem of making decisions in a partially observable environment. The algorithm maintains a Q-table, where each entry represents the expected cumulative future reward for taking a specific action in a particular state. Through exploration and exploitation, the agent updates its Q-values based on the observed rewards and refines its decision-making policy.
 
+# Q-Learning Formula Explanation
+
+The Q-learning update formula is as follows:
+
+\[ Q(s, a) = Q(s, a) + \alpha \cdot \left[ R + \gamma \cdot \max_{a'}Q(s', a') - Q(s, a) \right] \]
+
+Here's a breakdown of the components:
+
+- \( Q(s, a) \): The Q-value for taking action \(a\) in state \(s\).
+- \( \alpha \): The learning rate, controlling the weight given to new information. It's a value between 0 and 1.
+- \( R \): The immediate reward obtained after taking action \(a\) in state \(s\).
+- \( \gamma \): The discount factor, representing the importance of future rewards. It's a value between 0 and 1.
+- \( \max_{a'}Q(s', a') \): The maximum Q-value for any action \(a'\) in the next state \(s'\).
+
+The update formula essentially adjusts the Q-value for the current state-action pair based on the immediate reward and the estimated future rewards. The goal is for the Q-values to converge to accurate estimates, allowing the agent to make optimal decisions in the environment.
+
+Remember, successful Q-learning involves finding a balance between exploration (trying new actions) and exploitation (choosing actions with the highest current estimated Q-values).
+
 ## Mountain Car Environment
 
 The Mountain Car environment is a classic problem in RL, where an underpowered car must build enough momentum to reach the top of a hill. The car can apply a force in the interval [-0.07, 0.07] to move backward, stay still, or move forward, respectively. The challenge is that the car cannot reach the goal directly but must learn to oscillate back and forth to gain enough energy to surmount the hill. Find more information about the [Mountain Car environment](https://gymnasium.farama.org/environments/classic_control/mountain_car/).
@@ -34,6 +52,7 @@ To render a trained episode, run `render_episode.py`. This script loads the save
 
 ![Mean Rewards](./artifacts/mountaincar.png)
 
+The agent learns for 700 episodes. In the beginning of the training the agent needs almost 50000 steps to reach the terminal state (position of the flag on top of the mountain). Each state yields a reward of -1 unless the agent climbed up the hill.
 ## Rendered Episode
 
 ![Rendered Episode](./assets/mountaincar.gif)
