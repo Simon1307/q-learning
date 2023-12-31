@@ -10,7 +10,7 @@ Q-Learning is a popular RL algorithm that deals with the problem of making decis
 
 ## Mountain Car Environment
 
-The Mountain Car environment is a classic problem in RL, where an underpowered car must build enough momentum to reach the top of a hill. The car can apply a force of -1, 0, or 1 to move backward, stay still, or move forward, respectively. The challenge is that the car cannot reach the goal directly but must learn to oscillate back and forth to gain enough energy to surmount the hill.
+The Mountain Car environment is a classic problem in RL, where an underpowered car must build enough momentum to reach the top of a hill. The car can apply a force in the interval [-0.07, 0.07] to move backward, stay still, or move forward, respectively. The challenge is that the car cannot reach the goal directly but must learn to oscillate back and forth to gain enough energy to surmount the hill. Find more information about the [Mountain Car environment](https://gymnasium.farama.org/environments/classic_control/mountain_car/).
 
 ![Mountain Car](./assets/mountaincar.png)
 
