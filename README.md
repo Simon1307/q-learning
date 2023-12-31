@@ -53,7 +53,7 @@ To render a trained episode, run `render_episode.py`. This script loads the save
 
 ![Mean Rewards](./artifacts/mountaincar.png)
 
-The agent learns for 700 episodes. In the beginning of the training the agent needs almost 50000 steps to reach the terminal state (position of the flag on top of the mountain). Each state yields a reward of -1 unless the agent climbed up the hill.
+The agent learns for 700 episodes. In the beginning of the training the agent needs almost 70000 steps to reach the terminal state (position of the flag on top of the mountain). Each state yields a reward of -1 unless the agent climbed up the hill.
 ## Rendered Episode
 
 ![Rendered Episode](./assets/mountaincar.gif)
